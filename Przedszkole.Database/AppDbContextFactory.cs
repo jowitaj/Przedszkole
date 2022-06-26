@@ -10,11 +10,10 @@ namespace Przedszkole.Database
     public class AppDbContextFactory : IDesignTimeContextFactory<AppDbContext>
     {
 
-        // Zdefiniowanie parametrow i utworzenie AppDbContext
-        public AppDbContext CreateDbContext(string [] args = null)
+        public AppDbContext CreateDbContext(string[] args = null)
         {
-            var options = new DbContextOptionsBuilder<AppDbContext>();
-            options.UseSqlServer("Server=.; Database=Przedszkole; Trusted_Connection=True;");
+            var options = new DbContextOptionsBuilder();
+            options.UseSqlServer("Server=.; Database=Przedszkole; Trusted_Connection=True");
             return new AppDbContext(options.Options);
 
         }

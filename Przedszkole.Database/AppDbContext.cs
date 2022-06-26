@@ -26,7 +26,7 @@ namespace Przedszkole.Database
         public DbSet<Obecnosc> Obecnosci { get; set; }
         public DbSet<Rodzice> Rodzice { get; set; }
 
-
+        // Metoda ktora wymaga id przy tworzeniu modelu
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Dziecko>().HasKey(x => x.Id);
