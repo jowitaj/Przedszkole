@@ -14,5 +14,6 @@ namespace Przedszkole.Database.Models
         public DateTime Data { get; set; }
         public int DzieckoId { get; set; }
         public Dziecko Dziecko { get; set; }
+        public bool Obecny { get; set; }
     }
 }
