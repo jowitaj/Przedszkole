@@ -6,7 +6,12 @@
         xmlns:local="clr-namespace:Przedszkole.GUI"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid Background="#FF464040">
+        <Button Content="Rodzice" HorizontalAlignment="Left" Height="31" Margin="10,10,0,0" VerticalAlignment="Top" Width="180" Foreground="White" Background="Black" FontWeight="Bold" Click="Rodzice_Click"/>
+        <Button Content="Dzieci" HorizontalAlignment="Left" Height="31" Margin="210,10,0,0" VerticalAlignment="Top" Width="180" Foreground="White" Background="Black" FontWeight="Bold" Click="Dzieci_Click"/>
+        <Button Content="Obecnosci" HorizontalAlignment="Left" Height="31" Margin="410,10,0,0" VerticalAlignment="Top" Width="180" Foreground="White" Background="Black" FontWeight="Bold" Click="Obecnosci_Click"/>
+        <Button Content="Wychowawcy" HorizontalAlignment="Left" Height="31" Margin="610,10,0,0" VerticalAlignment="Top" Width="180" Foreground="White" Background="Black" FontWeight="Bold" Click="Wychowawcy_Click"/>
 
+        <Frame x:Name="Main" Margin="20,60,20,20" ></Frame>
     </Grid>
 </Window>
