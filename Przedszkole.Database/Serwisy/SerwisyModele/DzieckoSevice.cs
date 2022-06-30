@@ -78,7 +78,7 @@ public class DzieckoSevice
     {
         try
         {
-            return (List<Dziecko>) await _service.GetAll();
+            return (List<Dziecko>) await _service.GetAll(x=>x.Rodzice, x=>x.Wychowawca);
         }
         catch (Exception ex)
         {

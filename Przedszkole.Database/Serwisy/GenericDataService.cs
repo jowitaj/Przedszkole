@@ -1,4 +1,7 @@
+using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 
@@ -17,10 +20,12 @@ public class GenericDataService<T> : IDataService<T> where T : class
     }
     
     
-    public async Task<IEnumerable<T>> GetAll()
+    public async Task<IEnumerable<T>> GetAll(params Expression<Func<T, object>>[] includeProperties)
     {
         using AppDbContext context = _contextFactory.CreateDbContext();
-        return await context.Set<T>().ToListAsync();
+        IQueryable<T> query = context.Set<T>();
+        query = includeProperties.Aggregate(query, (current, includeProperty) => current.Include(includeProperty));
+        return await query.ToListAsync();
     }
 
     public async Task<T> Get(int id)
