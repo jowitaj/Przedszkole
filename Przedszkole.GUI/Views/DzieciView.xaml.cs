@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -45,9 +46,9 @@ namespace Przedszkole.GUI.Views
             dodajDziecko.Show();
         }
 
-        private void Odswiez_Click(object sender, RoutedEventArgs e)
+        private  void Odswiez_Click(object sender, RoutedEventArgs e)
         {
-            GetKids();
+             GetKids();
         }
 
         private  void DeleteButton_Click(object sender, RoutedEventArgs e)

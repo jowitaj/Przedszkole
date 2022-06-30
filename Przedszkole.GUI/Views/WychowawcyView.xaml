@@ -7,6 +7,47 @@
              mc:Ignorable="d"
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid Background="Green">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
         
+        <ListView 
+            Grid.Row="0" Grid.Column="0"  Grid.RowSpan="4" Grid.ColumnSpan="5"
+            Name="PokazWychowawcow">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path = Imie}" Header="Imie wychowawcy" Width="100"></GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path = Nazwisko}" Header="Nazwisko wychowawcy" Width="100"></GridViewColumn>
+                    <GridViewColumn Header="Usun">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Content="Usuń"  Click="DeleteButton_Click"></Button>
+                            </DataTemplate>
+                            
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Edytuj">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Content="Edytuj" Click="Update_Click"></Button>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button Content="Dodaj wychowawce"  Grid.Row="5" Grid.Column= "3"  Margin="10" Click="DodajWychowawce_Click"></Button>
+        <Button Content="Odśwież"  Grid.Row="5" Grid.Column= "1"  Margin="10" Click="Odswiez_Click" ></Button>
     </Grid>
 </UserControl>
