@@ -23,17 +23,9 @@ namespace Przedszkole.GUI
     /// </summary>
     public partial class MainWindow : Window
     {
-        private readonly DzieckoSevice _dzieckoSevice;
-        private readonly WychowawcaService _wychowawcaService;
-        private readonly RodziceService _rodziceService;
-        private readonly ObecnoscService _obecnoscService;
         public MainWindow()
         {
             InitializeComponent();
-            _dzieckoSevice = new DzieckoSevice();
-            _obecnoscService = new ObecnoscService();
-            _rodziceService = new RodziceService();
-            _wychowawcaService = new WychowawcaService();
             DataContext = new MenuView();
         }
 

@@ -29,9 +29,30 @@
                 <GridView>
                     <GridViewColumn DisplayMemberBinding="{Binding Path = Imie}" Header="Imię" Width="100"></GridViewColumn>
                     <GridViewColumn DisplayMemberBinding="{Binding Path = Nazwisko}" Header="Nazwisko" Width="100"></GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path = RodziceId}" Header="Rodzice ID" Width="100"></GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path = Rodzice.ImieMatki}" Header="Imię Matki" Width="100"></GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path = Rodzice.ImieOjca}" Header="Imię Ojca" Width="100"></GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path = WychowawcaId}" Header="Wychowawca ID" Width="100"></GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path = Wychowawca.Imie}" Header="Imie Wychowawcy" Width="100"></GridViewColumn>
+                    <GridViewColumn Header="Usun">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Content="Usuń"  Click="DeleteButton_Click"></Button>
+                            </DataTemplate>
+                            
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Edytuj">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Content="Edytuj" Click="Update_Click"></Button>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button Content="Dodaj dziecko"  Grid.Row="5" Grid.Column= "2"  Margin="10" ></Button>
+        <Button Content="Dodaj dziecko"  Grid.Row="5" Grid.Column= "3"  Margin="10" Click="DodajDziecko_Click"></Button>
+        <Button Content="Odśwież"  Grid.Row="5" Grid.Column= "1"  Margin="10" Click="Odswiez_Click" ></Button>
     </Grid>
 </UserControl>

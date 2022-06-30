@@ -1,0 +1,36 @@
+<Window x:Class="Przedszkole.GUI.EdytujDziecko"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:Przedszkole.GUI"
+        mc:Ignorable="d"
+        Title="Edytuj Dziecko" Height="450" Width="800">
+    <Grid Background="Pink">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock  TextAlignment="Center" Grid.Column="1" FontWeight="SemiBold" FontSize="20"> EDYTUJ DZIECKO</TextBlock>
+        <TextBlock  FontWeight="SemiBold" HorizontalAlignment="Center" Height="50" Grid.Column="0" Grid.Row="1">Imie dziecka </TextBlock>
+        <TextBlock FontWeight="SemiBold" HorizontalAlignment="Center" Height="50" Grid.Column="0" Grid.Row="2">Nazwisko dziecka </TextBlock>
+        <TextBlock FontWeight="SemiBold" HorizontalAlignment="Center" Height="50" Grid.Column="0" Grid.Row="3">Rodzice ID </TextBlock>
+        <TextBlock FontWeight="SemiBold" HorizontalAlignment="Center" Height="50" Grid.Column="0" Grid.Row="4">Wychowawca ID </TextBlock>
+        <TextBox Name="Imie" Height="50" Grid.Column="1" Grid.Row="1"></TextBox>
+        <TextBox Name="Nazwisko" Height="50" Grid.Column="1" Grid.Row="2"></TextBox>
+        <TextBox Name="RodziceID" Height="50" Grid.Column="1" Grid.Row="3"></TextBox>
+        <TextBox Name="WychowawcaID" Height="50" Grid.Column="1" Grid.Row="4"></TextBox>
+        <Button Content="Edytuj dziecko" Height="50" Grid.Column="1" Grid.Row="5" Click="Edytuj_Dziecko"></Button>
+
+    </Grid>
+</Window>

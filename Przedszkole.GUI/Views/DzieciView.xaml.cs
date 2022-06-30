@@ -38,6 +38,31 @@ namespace Przedszkole.GUI.Views
             var dzieci =  await _dzieckoService.GetAll();
             PokazDzieci.ItemsSource = dzieci;
         }
-        
+
+        private void DodajDziecko_Click(object sender, RoutedEventArgs e)
+        {
+            Window dodajDziecko = new DodajDziecko();
+            dodajDziecko.Show();
+        }
+
+        private void Odswiez_Click(object sender, RoutedEventArgs e)
+        {
+            GetKids();
+        }
+
+        private  void DeleteButton_Click(object sender, RoutedEventArgs e)
+        {
+            dynamic content = ((Button) sender).DataContext;
+            _dzieckoService.Delete(content.Id);
+            GetKids();
+            this.Content = new DzieciView();
+        }
+
+        private void Update_Click(object sender, RoutedEventArgs e)
+        {
+            dynamic content = ((Button) sender).DataContext;
+            Window edytujDziecko = new EdytujDziecko(content.Id);
+            edytujDziecko.Show();
+        }
     }
 }

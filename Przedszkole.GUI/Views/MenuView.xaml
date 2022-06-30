@@ -8,6 +8,6 @@
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
 
-        <TextBlock> Jestem Jowitka i to uzupelnie sama xd</TextBlock>
+        <TextBlock> </TextBlock>
     </Grid>
 </UserControl>

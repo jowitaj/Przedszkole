@@ -11,7 +11,7 @@
         Background="#FF464040"
         Title="Menu" 
         Height="450" 
-        Width="800">
+        Width="1200">
     
     <Window.Resources>
         <DataTemplate x:Name="rodzice" DataType="{x:Type viewModels:RodziceViewModel}">
