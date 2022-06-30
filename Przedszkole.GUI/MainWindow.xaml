@@ -4,14 +4,62 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Przedszkole.GUI"
+        xmlns:viewmodels=" clr-namespace:Przedszkole.GUI.ViewModels"
+        xmlns:viewModels="clr-namespace:Przedszkole.GUI.ViewModels"
+        xmlns:views="clr-namespace:Przedszkole.GUI.Views"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid Background="#FF464040">
-        <Button Content="Rodzice" HorizontalAlignment="Left" Height="31" Margin="10,10,0,0" VerticalAlignment="Top" Width="180" Foreground="White" Background="Black" FontWeight="Bold" Click="Rodzice_Click"/>
-        <Button Content="Dzieci" HorizontalAlignment="Left" Height="31" Margin="210,10,0,0" VerticalAlignment="Top" Width="180" Foreground="White" Background="Black" FontWeight="Bold" Click="Dzieci_Click"/>
-        <Button Content="Obecnosci" HorizontalAlignment="Left" Height="31" Margin="410,10,0,0" VerticalAlignment="Top" Width="180" Foreground="White" Background="Black" FontWeight="Bold" Click="Obecnosci_Click"/>
-        <Button Content="Wychowawcy" HorizontalAlignment="Left" Height="31" Margin="610,10,0,0" VerticalAlignment="Top" Width="180" Foreground="White" Background="Black" FontWeight="Bold" Click="Wychowawcy_Click"/>
+        Background="#FF464040"
+        Title="Menu" 
+        Height="450" 
+        Width="800">
+    
+    <Window.Resources>
+        <DataTemplate x:Name="rodzice" DataType="{x:Type viewModels:RodziceViewModel}">
+            <views:RodziceView DataContext="{Binding}" />
+        </DataTemplate>
+        <DataTemplate x:Name="dzieci" DataType="{x:Type viewModels:DzieciViewModel}">
+            <views:DzieciView DataContext="{Binding}" />
+        </DataTemplate>
+        <DataTemplate x:Name="wychowawcy" DataType="{x:Type viewModels:WychowawcaViewModel}">
+            <views:WychowawcyView DataContext="{Binding}" />
+        </DataTemplate>
+        <DataTemplate x:Name="obecnosci" DataType="{x:Type viewModels:ObecnoscViewModel}">
+            <views:ObecnosciView DataContext="{Binding}" />
+        </DataTemplate>
+        <DataTemplate x:Name="menu" DataType="{x:Type viewModels:MenuViewModel}">
+            <views:MenuView DataContext="{Binding}" />
+        </DataTemplate>
+    </Window.Resources>
 
-        <Frame x:Name="Main" Margin="20,60,20,20" ></Frame>
+
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <DockPanel Background="DeepPink"  Grid.Row="0" Grid.Column="0"  Grid.RowSpan="5" >
+            <StackPanel>
+                <Button Content="Dzieci" Margin="30" Click="Dzieci_Click"  />
+                <Button Content="Rodzice" Margin="30" Click="Rodzice_Click" />
+                <Button Content="Wychowawcy" Margin="30" Click="Wychowawcy_Click" />
+                <Button Content="Obecnosci" Margin="30" Click="Obecnosci_Click" />
+                <Button Content="Menu" Margin="30"  Click="Menu_Click"/>
+            </StackPanel>
+        </DockPanel>
+        
+            <ContentControl  Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="4" Grid.RowSpan="5" Content="{Binding}"/>
     </Grid>
 </Window>
+
+

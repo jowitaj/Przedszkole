@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Przedszkole.Database.Services.SerwisyModele;
+using Przedszkole.GUI.ViewModels;
+using Przedszkole.GUI.Views;
 
 namespace Przedszkole.GUI
 {
@@ -32,27 +34,33 @@ namespace Przedszkole.GUI
             _obecnoscService = new ObecnoscService();
             _rodziceService = new RodziceService();
             _wychowawcaService = new WychowawcaService();
+            DataContext = new MenuView();
         }
-        
 
-        private void Rodzice_Click(object sender, RoutedEventArgs e)
-        {
-            Main.Content = new Rodzice();
-        }
 
         private void Dzieci_Click(object sender, RoutedEventArgs e)
         {
-            Main.Content = new Dzieci();
+            DataContext = new DzieciViewModel();
         }
 
-        private void Obecnosci_Click(object sender, RoutedEventArgs e)
+        private void Rodzice_Click(object sender, RoutedEventArgs e)
         {
-            Main.Content = new Obecnosci();
+            DataContext = new RodziceViewModel();
         }
 
         private void Wychowawcy_Click(object sender, RoutedEventArgs e)
         {
-            Main.Content = new Wychowawcy();
+            DataContext = new WychowawcaViewModel();
+        }
+
+        private void Obecnosci_Click(object sender, RoutedEventArgs e)
+        {
+            DataContext = new ObecnoscViewModel();
+        }
+
+        private void Menu_Click(object sender, RoutedEventArgs e)
+        {
+            DataContext = new MenuView();
         }
     }
 }
