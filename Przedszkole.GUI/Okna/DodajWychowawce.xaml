@@ -6,7 +6,27 @@
         xmlns:local="clr-namespace:Przedszkole.GUI"
         mc:Ignorable="d"
         Title="DodajWychowawce" Height="450" Width="800">
-    <Grid>
-        
+    <Grid Background="Pink">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock  TextAlignment="Center" Grid.Column="1" FontWeight="SemiBold" FontSize="20"> DODAJ WYCHOWAWCE</TextBlock>
+        <TextBlock  FontWeight="SemiBold" HorizontalAlignment="Center" Height="50" Grid.Column="0" Grid.Row="1">Imie </TextBlock>
+        <TextBlock FontWeight="SemiBold" HorizontalAlignment="Center" Height="50" Grid.Column="0" Grid.Row="2">Nazwisko  </TextBlock>
+        <TextBox Name="Imie" Height="50" Grid.Column="1" Grid.Row="1"></TextBox>
+        <TextBox Name="Nazwisko" Height="50" Grid.Column="1" Grid.Row="2"></TextBox>
+        <Button Content="Dodaj wychowawce" Height="50" Grid.Column="1" Grid.Row="5" Click="Dodaj_Wychowawce"></Button>
+
     </Grid>
 </Window>

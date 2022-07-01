@@ -34,7 +34,8 @@ public partial class WychowawcyView : UserControl
 
     private void DodajWychowawce_Click(object sender, RoutedEventArgs e)
     {
-        throw new System.NotImplementedException();
+        Window dodajWychowawce = new DodajWychowawce();
+        dodajWychowawce.Show();
     }
 
     private void Odswiez_Click(object sender, RoutedEventArgs e)

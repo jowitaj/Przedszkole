@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Przedszkole.Database.Services.SerwisyModele;
+using Przedszkole.GUI.Okna;
 
 namespace Przedszkole.GUI.Views
 {
@@ -46,7 +47,8 @@ namespace Przedszkole.GUI.Views
 
         private void DodajRodzica_Click(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            Window dodajRodzica = new DodajRodzica();
+            dodajRodzica.Show();
         }
 
         private void Odswiez_Click(object sender, RoutedEventArgs e)

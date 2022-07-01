@@ -34,7 +34,8 @@ public partial class ObecnosciView : UserControl
 
     private void DodajObecnosc_Click(object sender, RoutedEventArgs e)
     {
-        throw new System.NotImplementedException();
+        Window dodajObecnosc = new DodajObecnosc();
+        dodajObecnosc.Show();
     }
 
     private void Odswiez_Click(object sender, RoutedEventArgs e)

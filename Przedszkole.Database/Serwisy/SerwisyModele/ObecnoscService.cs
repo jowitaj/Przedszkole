@@ -78,7 +78,7 @@ public class ObecnoscService
     {
         try
         {
-            return (List<Obecnosc>) await _service.GetAll();
+            return (List<Obecnosc>) await _service.GetAll(x=>x.Dziecko);
         }
         catch (Exception ex)
         {
