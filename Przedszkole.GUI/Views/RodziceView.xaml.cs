@@ -42,7 +42,9 @@ namespace Przedszkole.GUI.Views
 
         private void Update_Click(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            dynamic content = ((Button) sender).DataContext;
+            Window edytujRodzica = new EdytujRodzica(content.Id);
+            edytujRodzica.Show();
         }
 
         private void DodajRodzica_Click(object sender, RoutedEventArgs e)

@@ -6,7 +6,30 @@
         xmlns:local="clr-namespace:Przedszkole.GUI.Okna"
         mc:Ignorable="d"
         Title="EdytujRodzica" Height="450" Width="800">
-    <Grid>
-        
+    <Grid Background="Pink"> 
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock  TextAlignment="Center" Grid.Column="1" FontWeight="SemiBold" FontSize="20"> EDYTUJ RODZICA</TextBlock>
+        <TextBlock  FontWeight="SemiBold" HorizontalAlignment="Center" Height="50" Grid.Column="0" Grid.Row="1">Imie Matki </TextBlock>
+        <TextBlock FontWeight="SemiBold" HorizontalAlignment="Center" Height="50" Grid.Column="0" Grid.Row="2">Nazwisko Matki </TextBlock>
+        <TextBlock FontWeight="SemiBold" HorizontalAlignment="Center" Height="50" Grid.Column="0" Grid.Row="3">Imie Ojca </TextBlock>
+        <TextBlock FontWeight="SemiBold" HorizontalAlignment="Center" Height="50" Grid.Column="0" Grid.Row="4">Nazwisko Ojca </TextBlock>
+        <TextBox Name="ImieMatki" Height="50" Grid.Column="1" Grid.Row="1"></TextBox>
+        <TextBox Name="NazwiskoMatki" Height="50" Grid.Column="1" Grid.Row="2"></TextBox>
+        <TextBox Name="ImieOjca" Height="50" Grid.Column="1" Grid.Row="3"></TextBox>
+        <TextBox Name="NazwiskoOjca" Height="50" Grid.Column="1" Grid.Row="4"></TextBox>
+        <Button Content="Edytuj rodzica" Height="50" Grid.Column="1" Grid.Row="5" Click="Edytuj_Rodzica"></Button>
     </Grid>
 </Window>

@@ -29,7 +29,9 @@ public partial class ObecnosciView : UserControl
 
     private void Update_Click(object sender, RoutedEventArgs e)
     {
-        throw new System.NotImplementedException();
+        dynamic content = ((Button) sender).DataContext;
+        Window edytujObecnosc = new EdytujObecnosc(content.Id);
+        edytujObecnosc.Show();
     }
 
     private void DodajObecnosc_Click(object sender, RoutedEventArgs e)

@@ -29,7 +29,9 @@ public partial class WychowawcyView : UserControl
 
     private void Update_Click(object sender, RoutedEventArgs e)
     {
-        throw new System.NotImplementedException();
+        dynamic content = ((Button) sender).DataContext;
+        Window edytujWychowawce = new EdytujWychowawce(content.Id);
+        edytujWychowawce.Show();
     }
 
     private void DodajWychowawce_Click(object sender, RoutedEventArgs e)

@@ -6,7 +6,28 @@
         xmlns:local="clr-namespace:Przedszkole.GUI"
         mc:Ignorable="d"
         Title="EdytujObecnosc" Height="450" Width="800">
-    <Grid>
-        
+    <Grid Background="Pink">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock  TextAlignment="Center" Grid.Column="1" FontWeight="SemiBold" FontSize="20"> EDYTUJ OBECNOŚĆ</TextBlock>
+        <TextBlock  FontWeight="SemiBold" HorizontalAlignment="Center" Height="50" Grid.Column="0" Grid.Row="1">Data </TextBlock>
+        <TextBlock FontWeight="SemiBold" HorizontalAlignment="Center" Height="50" Grid.Column="0" Grid.Row="2">Dziecko ID </TextBlock>
+        <TextBlock FontWeight="SemiBold" HorizontalAlignment="Center" Height="50" Grid.Column="0" Grid.Row="3">Obecny </TextBlock>
+        <DatePicker Name="Data" Height="50" Grid.Column="1" Grid.Row="1"></DatePicker>
+        <TextBox Name="DzieckoID" Height="50" Grid.Column="1" Grid.Row="2"></TextBox>
+        <CheckBox Name="Obecny" Height="50" Grid.Column="1" Grid.Row="3"></CheckBox>
+        <Button Content="Edytuj obecnosc" Height="50" Grid.Column="1" Grid.Row="5" Click="Edytuj_Obecnosc"></Button>
     </Grid>
 </Window>
