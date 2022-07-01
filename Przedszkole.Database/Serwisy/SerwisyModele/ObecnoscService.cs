@@ -13,6 +13,14 @@ public class ObecnoscService
         _service = new GenericDataService<Obecnosc>(new AppDbContextFactory());
     }
     
+    /// <summary>
+    /// Metoda na utworzenie obiektu Obecnosc oraz dodanie go do bazy danych do tabeli Obecnosci
+    /// </summary>
+    /// <param name="data"></param>
+    /// <param name="dzieckoId"></param>
+    /// <param name="obecny"></param>
+    /// <returns></returns>
+    /// <exception cref="Exception"></exception>
     public async Task<Obecnosc> Create(DateTime data, int dzieckoId, bool obecny)
     {
         try
@@ -31,6 +39,15 @@ public class ObecnoscService
         }
     }
     
+    /// <summary>
+    /// Metoda na edycje obiektu z tabeli w bazie danych
+    /// </summary>
+    /// <param name="id"></param>
+    /// <param name="data"></param>
+    /// <param name="dzieckoId"></param>
+    /// <param name="obecny"></param>
+    /// <returns></returns>
+    /// <exception cref="Exception"></exception>
     public async Task<Obecnosc> Update(int id,DateTime data, int dzieckoId, bool obecny)
     {
         try
@@ -47,7 +64,12 @@ public class ObecnoscService
             throw new Exception(e.Message);
         }
     }
-    
+    /// <summary>
+    /// Metoda na pobieranie rekordu z bazy po ID
+    /// </summary>
+    /// <param name="ID"></param>
+    /// <returns></returns>
+    /// <exception cref="Exception"></exception>
     public Task<Obecnosc> GetById(int ID)
     {
         try
@@ -59,7 +81,12 @@ public class ObecnoscService
             throw new Exception(ex.Message);
         }
     }
-    
+    /// <summary>
+    /// Metoda na usuniecie rekordu z bazy po ID
+    /// </summary>
+    /// <param name="id"></param>
+    /// <returns></returns>
+    /// <exception cref="Exception"></exception>
     public async Task<bool> Delete(int id)
     {
         try
@@ -73,7 +100,11 @@ public class ObecnoscService
             throw new Exception(ex.Message);
         }
     }
-    
+    /// <summary>
+    /// Metoda na pobranie wszystkich rekordow z tabeli Obecnosci
+    /// </summary>
+    /// <returns></returns>
+    /// <exception cref="Exception"></exception>
     public async Task<List<Obecnosc>> GetAll()
     {
         try

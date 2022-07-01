@@ -11,6 +11,11 @@ namespace Przedszkole.Database
     public class AppDbContextFactory : IDesignTimeDbContextFactory<AppDbContext>
     {
 
+        /// <summary>
+        /// Metoda na utworzenie contextu bazy danych na podstawie opcji
+        /// </summary>
+        /// <param name="args"></param>
+        /// <returns></returns>
         public AppDbContext CreateDbContext(string[] args = null)
         {
             var options = new DbContextOptionsBuilder<AppDbContext>();

@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace Przedszkole.Database.Models
 {
+    /// <summary>
+    /// Klasa tworzaca rekordy w tabeli Wychowawcy w bazie danych
+    /// </summary>
     public class Wychowawca
     {
         [Key]

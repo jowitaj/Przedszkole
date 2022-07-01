@@ -13,6 +13,15 @@ public class DzieckoSevice
         _service = new GenericDataService<Dziecko>(new AppDbContextFactory());
     }
 
+    /// <summary>
+    ///  Metoda na utworzenie obiektu Dziecko oraz dodanie go do bazy danych do tabeli Dzieci
+    /// </summary>
+    /// <param name="imie"></param>
+    /// <param name="nazwisko"></param>
+    /// <param name="rodziceId"></param>
+    /// <param name="wychowawcaId"></param>
+    /// <returns></returns>
+    /// <exception cref="Exception"></exception>
     public async Task<Dziecko> Create(string imie, string nazwisko,int rodziceId, int wychowawcaId)
     {
         try
@@ -31,6 +40,17 @@ public class DzieckoSevice
             throw new Exception(e.Message);
         }
     }
+    
+    /// <summary>
+    /// Metoda na edycje obiektu Dziecko z tabeli Dzieci
+    /// </summary>
+    /// <param name="id"></param>
+    /// <param name="imie"></param>
+    /// <param name="nazwisko"></param>
+    /// <param name="rodziceId"></param>
+    /// <param name="wychowawcaId"></param>
+    /// <returns></returns>
+    /// <exception cref="Exception"></exception>
     public async Task<Dziecko> Update(int id,string imie, string nazwisko,int rodziceId, int wychowawcaId)
     {
         try
@@ -48,6 +68,12 @@ public class DzieckoSevice
         }
     }
     
+    /// <summary>
+    /// Metoda na pobieranie rekordu z bazy po ID
+    /// </summary>
+    /// <param name="ID"></param>
+    /// <returns></returns>
+    /// <exception cref="Exception"></exception>
     public Task<Dziecko> GetById(int ID)
     {
         try
@@ -60,6 +86,12 @@ public class DzieckoSevice
         }
     }
     
+    /// <summary>
+    /// Metoda na usuniecie rekordu z bazy po ID
+    /// </summary>
+    /// <param name="id"></param>
+    /// <returns></returns>
+    /// <exception cref="Exception"></exception>
     public async Task<bool> Delete(int id)
     {
         try
@@ -74,6 +106,11 @@ public class DzieckoSevice
         }
     }
     
+    /// <summary>
+    /// Metoda na pobranie wszystkich rekordow z tabeli Dzieci
+    /// </summary>
+    /// <returns></returns>
+    /// <exception cref="Exception"></exception>
     public async Task<List<Dziecko>> GetAll()
     {
         try

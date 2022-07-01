@@ -6,7 +6,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Przedszkole.Database.Models
-{
+{/// <summary>
+ /// Klasa tworzaca rekordy w tabeli Rodzice w bazie danych
+ /// </summary>
     public class Rodzice
     {
         [Key]
