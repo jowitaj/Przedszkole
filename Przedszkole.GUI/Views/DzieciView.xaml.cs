@@ -25,19 +25,19 @@ namespace Przedszkole.GUI.Views
     /// </summary>
     public partial class DzieciView : UserControl
     {
-        private readonly DzieckoSevice _dzieckoService;
+        private readonly DzieckoSevice _service;
         public DzieciView()
         {
             InitializeComponent();
-            _dzieckoService = new DzieckoSevice();
-            GetKids();
+            _service = new DzieckoSevice();
+            Get();
 
         }
 
-        public async void GetKids()
+        public async void Get()
         {
-            var dzieci =  await _dzieckoService.GetAll();
-            PokazDzieci.ItemsSource = dzieci;
+            var items =  await _service.GetAll();
+            PokazDzieci.ItemsSource = items;
         }
 
         private void DodajDziecko_Click(object sender, RoutedEventArgs e)
@@ -48,15 +48,14 @@ namespace Przedszkole.GUI.Views
 
         private  void Odswiez_Click(object sender, RoutedEventArgs e)
         {
-             GetKids();
+             Get();
         }
 
         private  void DeleteButton_Click(object sender, RoutedEventArgs e)
         {
             dynamic content = ((Button) sender).DataContext;
-            _dzieckoService.Delete(content.Id);
-            GetKids();
-            this.Content = new DzieciView();
+            _service.Delete(content.Id);
+            Get();
         }
 
         private void Update_Click(object sender, RoutedEventArgs e)

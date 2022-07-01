@@ -12,22 +12,31 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Przedszkole.Database.Services.SerwisyModele;
 
 namespace Przedszkole.GUI.Views
 {
-    /// <summary>
-    /// Interaction logic for RodziceView.xaml
-    /// </summary>
     public partial class RodziceView : UserControl
     {
+        private readonly RodziceService _service;
         public RodziceView()
         {
             InitializeComponent();
+            _service = new RodziceService();
+            Get();
         }
 
+        public async void Get()
+        {
+            var items =  await _service.GetAll();
+            PokazRodzicow.ItemsSource = items;
+        }
+        
         private void DeleteButton_Click(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            dynamic content = ((Button) sender).DataContext;
+            _service.Delete(content.Id);
+            Get();
         }
 
         private void Update_Click(object sender, RoutedEventArgs e)
@@ -42,7 +51,7 @@ namespace Przedszkole.GUI.Views
 
         private void Odswiez_Click(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            Get();
         }
     }
 }
