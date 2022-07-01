@@ -27,6 +27,7 @@
             Name="PokazDzieci">
             <ListView.View>
                 <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path = Id}" Header="ID Dziecka" Width="100"></GridViewColumn>
                     <GridViewColumn DisplayMemberBinding="{Binding Path = Imie}" Header="Imię" Width="100"></GridViewColumn>
                     <GridViewColumn DisplayMemberBinding="{Binding Path = Nazwisko}" Header="Nazwisko" Width="100"></GridViewColumn>
                     <GridViewColumn DisplayMemberBinding="{Binding Path = RodziceId}" Header="Rodzice ID" Width="100"></GridViewColumn>
@@ -34,7 +35,7 @@
                     <GridViewColumn DisplayMemberBinding="{Binding Path = Rodzice.ImieOjca}" Header="Imię Ojca" Width="100"></GridViewColumn>
                     <GridViewColumn DisplayMemberBinding="{Binding Path = WychowawcaId}" Header="Wychowawca ID" Width="100"></GridViewColumn>
                     <GridViewColumn DisplayMemberBinding="{Binding Path = Wychowawca.Imie}" Header="Imie Wychowawcy" Width="100"></GridViewColumn>
-                    <GridViewColumn Header="Usun">
+                    <GridViewColumn Header="Usun" Width="100">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <Button Content="Usuń"  Click="DeleteButton_Click"></Button>
@@ -42,7 +43,7 @@
                             
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
-                    <GridViewColumn Header="Edytuj">
+                    <GridViewColumn Header="Edytuj" Width="100">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <Button Content="Edytuj" Click="Update_Click"></Button>

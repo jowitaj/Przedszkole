@@ -32,7 +32,7 @@
                     <GridViewColumn DisplayMemberBinding="{Binding Path = Dziecko.Imie}" Header="Imię dziecka" Width="100"></GridViewColumn>
                     <GridViewColumn DisplayMemberBinding="{Binding Path = Dziecko.Nazwisko}" Header="Nazwisko dziecka" Width="100"></GridViewColumn>
                     <GridViewColumn DisplayMemberBinding="{Binding Path = Obecny}" Header="Obecny" Width="100"></GridViewColumn>
-                    <GridViewColumn Header="Usun">
+                    <GridViewColumn Header="Usun" Width="100">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <Button Content="Usuń"  Click="DeleteButton_Click"></Button>
@@ -40,7 +40,7 @@
                             
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
-                    <GridViewColumn Header="Edytuj">
+                    <GridViewColumn Header="Edytuj" Width="100">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <Button Content="Edytuj" Click="Update_Click"></Button>

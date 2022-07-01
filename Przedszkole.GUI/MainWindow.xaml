@@ -9,7 +9,7 @@
         xmlns:views="clr-namespace:Przedszkole.GUI.Views"
         mc:Ignorable="d"
         Background="#FF464040"
-        Title="Menu" 
+        Title="Projekt" 
         Height="450" 
         Width="1200">
     
