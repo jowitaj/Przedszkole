@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:Przedszkole.GUI.Views"
              mc:Ignorable="d"
              d:DesignHeight="300" d:DesignWidth="300">
-    <Grid Background="White">
+    <Grid Background="Pink">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
@@ -15,13 +15,14 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="31*"/>
+            <RowDefinition Height="29*"/>
         </Grid.RowDefinitions>
-        
+
         <ListView 
             Grid.Row="0" Grid.Column="0"  Grid.RowSpan="4" Grid.ColumnSpan="5"
             Name="PokazObecnosci">
@@ -37,7 +38,7 @@
                             <DataTemplate>
                                 <Button Content="Usuń"  Click="DeleteButton_Click"></Button>
                             </DataTemplate>
-                            
+
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
                     <GridViewColumn Header="Edytuj" Width="100">
@@ -50,7 +51,7 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button Content="Dodaj obecnosc"  Grid.Row="5" Grid.Column= "3"  Margin="10" Click="DodajObecnosc_Click"></Button>
-        <Button Content="Odśwież"  Grid.Row="5" Grid.Column= "1"  Margin="10" Click="Odswiez_Click" ></Button>
+        <Button Content="Dodaj obecnosc"  Grid.Row="4" Grid.Column= "3" Background="White" BorderBrush="deeppink" Margin="10,10,10,10" Click="DodajObecnosc_Click" Grid.RowSpan="2"></Button>
+        <Button Content="Odśwież"  Grid.Row="4" Grid.Column= "1" Background="White" BorderBrush="deeppink" Margin="10,10,10,10" Click="Odswiez_Click" Grid.RowSpan="2" ></Button>
     </Grid>
 </UserControl>

@@ -22,6 +22,7 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         
+        
         <ListView 
             Grid.Row="0" Grid.Column="0"  Grid.RowSpan="4" Grid.ColumnSpan="5"
             Name="PokazDzieci">
@@ -53,7 +54,7 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button Content="Dodaj dziecko"  Grid.Row="5" Grid.Column= "3"  Margin="10" Click="DodajDziecko_Click"></Button>
-        <Button Content="Odśwież"  Grid.Row="5" Grid.Column= "1"  Margin="10" Click="Odswiez_Click" ></Button>
+        <Button Content="Dodaj dziecko"  Grid.Row="5" Grid.Column= "3" Background="White" BorderBrush="deeppink" Margin="10" Click="DodajDziecko_Click"></Button>
+        <Button Content="Odśwież"  Grid.Row="5" Grid.Column= "1"  Background="White" BorderBrush="deeppink" Margin="10" Click="Odswiez_Click" ></Button>
     </Grid>
 </UserControl>

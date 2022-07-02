@@ -8,9 +8,9 @@
              d:DesignHeight="600" d:DesignWidth="600">
     <Grid>
 
-        <TextBlock FontWeight="Bold"  FontSize="30" Margin="200 30 10 0" Foreground="White">Jowita Jońca </TextBlock>
+        <TextBlock FontWeight="Bold"  FontSize="40" Margin="250 150 10 0" Foreground="DeepSkyBlue" >PRZEDSZKOLE</TextBlock>
         <Grid.Background>
-            <ImageBrush ImageSource="https://petportal.pl/wp-content/uploads/2020/08/S%C5%82odkie-kotki-dlaczego-kocie%CC%A8ta-sa%CC%A8-takie-s%C5%82odkie-740x444.jpg"></ImageBrush>
+            <ImageBrush ImageSource="https://pp46.szczecin.pl/wp-content/uploads/2021/12/pp46_main_1200-800-1024x709.jpg"></ImageBrush>
         </Grid.Background>
     </Grid>
 </UserControl>

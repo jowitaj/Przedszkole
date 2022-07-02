@@ -48,13 +48,13 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <DockPanel Background="DeepPink"  Grid.Row="0" Grid.Column="0"  Grid.RowSpan="5" >
+        <DockPanel Background="Pink"  Grid.Row="0" Grid.Column="0"  Grid.RowSpan="5" >
             <StackPanel>
-                <Button Content="Dzieci" Margin="30" Click="Dzieci_Click"  />
-                <Button Content="Rodzice" Margin="30" Click="Rodzice_Click" />
-                <Button Content="Wychowawcy" Margin="30" Click="Wychowawcy_Click" />
-                <Button Content="Obecnosci" Margin="30" Click="Obecnosci_Click" />
-                <Button Content="Menu" Margin="30"  Click="Menu_Click"/>
+                <Button Content="Dzieci" Margin="30" Click="Dzieci_Click" Background="White" BorderBrush="deeppink" />
+                <Button Content="Rodzice" Margin="30" Click="Rodzice_Click" Background="White" BorderBrush="deeppink" />
+                <Button Content="Wychowawcy" Margin="30" Click="Wychowawcy_Click" Background="White" BorderBrush="deeppink" />
+                <Button Content="Obecnosci" Margin="30" Click="Obecnosci_Click" Background="White" BorderBrush="deeppink" UseLayoutRounding="False" />
+                <Button Content="Menu" Margin="30"  Click="Menu_Click" Background="White" BorderBrush="deeppink"/>
             </StackPanel>
         </DockPanel>
         

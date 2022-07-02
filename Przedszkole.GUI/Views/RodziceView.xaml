@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:Przedszkole.GUI.Views"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid Background="Red">
+    <Grid Background="PINK">
             <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
@@ -50,7 +50,7 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button Content="Dodaj rodzica"  Grid.Row="5" Grid.Column= "3"  Margin="10" Click="DodajRodzica_Click"></Button>
-        <Button Content="Odśwież"  Grid.Row="5" Grid.Column= "1"  Margin="10" Click="Odswiez_Click" ></Button>
+        <Button Content="Dodaj rodzica"  Grid.Row="5" Background="White" BorderBrush="deeppink" Grid.Column= "3"  Margin="10" Click="DodajRodzica_Click"></Button>
+        <Button Content="Odśwież"  Grid.Row="5"  Background="White" BorderBrush="deeppink" Grid.Column= "1"  Margin="10" Click="Odswiez_Click" ></Button>
     </Grid>
 </UserControl>
